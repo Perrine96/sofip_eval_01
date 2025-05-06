@@ -6,7 +6,6 @@ function store() {
     localStorage.setItem('password', password.value);
     if (username.value == '' || password.value == '') {
         alert('Veuillez remplir tous les champs.');
-        return false;
     } else {
         alert('Inscription réussie !');
         window.location.href = 'login.html';

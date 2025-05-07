@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon film préféré</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>Connexion</h1>
-    <form id="login-form">
+    <h1>Inscription</h1>
+    <form id="rgstr_form" action="register" method="POST">
         <label for="username">Pseudo:</label>
         <input type="text" id="username" name="username" required>
-
+        
         <label for="password">Mot de passe:</label>
         <input type="password" id="password" name="password" required>
-
-        <input id="login_btn" type="button" value="Connexion" onClick="check()"/> 
+        
+        <label for="password">Confirmez le mot de passe:</label>
+        <input type="password" id="password_confirm" name="password" required>
+        
+        <button type="submit" id="rgstr_btn">S'inscrire</button>
     </form>
-    <button id="return_btn" type="button" onClick="returnToRegister()">Retour</button>
+    <button id="goToLogin_btn" type="submit" onClick="returnToLogin()">Connexion</button>
+    <script src="script.js"></script>
 </body>

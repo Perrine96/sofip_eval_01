@@ -6,6 +6,7 @@
 
 body {
     font-family: Quicksand, sans-serif;
+    background-color: #f4eee5;
 }
 
 header {
@@ -17,8 +18,9 @@ header {
         & div {
             height: 100vh;
             width: 100vw;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.107), rgba(0, 0, 0, 0.569));
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.173), rgba(0, 0, 0, 0.637));
                 & .container {
+                    padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -26,6 +28,7 @@ header {
                     text-align: center;
                     font-size: 2.5rem;
                         & h1 {
+                            text-align: start;
                             font-size: 2rem;
                             justify-self: flex-start;
                             align-self: flex-start;

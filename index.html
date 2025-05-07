@@ -23,24 +23,33 @@
     <header>
         <div class="gradient">
             <div class="container">
-                <h1>Mon film préféré</h1>
+                <h1>Mon film <br><span id="fave">préféré</span></h1>
                 <h2>Le Voyage de Chihiro</h2>
                 <h3>Réalisé par Hayao Miyazaki</h3>
+                <h2>Synopsis</h2>
+                <p>Chihiro, une petite fille de 10 ans, se retrouve dans un monde magique après que ses parents aient été transformés en cochons. Elle doit travailler dans un bain public pour les esprits afin de retrouver son nom et sauver ses parents.</p>
                 <img src="img/chihiro-poster.jpg" alt="Poster du film 'Le Voyage de Chihiro'" class="film_poster">
+                <button id="learn_more_btn" type="button" onClick="learnMore()">En savoir plus</button>
             </div>
         </div>
     </header>
 
     <main>
-        <h3>Casting</h3>
+        <div class="container_casting">
+        <h3 id="casting_title">CASTING</h3>
         <ul class="casting">
             <li>
                 <img src="img/chihiro.jpg" alt="Chihiro" class="casting_img">
-                <p>Rumi Hiiragi</p>
-                <p>Chihiro</p>
+                <p>Rumi Hiiragi<br>Chihiro</p>
             </li>
-            <li>Miyu Irino<br>Haku</li>
-            <li>Mari Natsuki<br>Yubaba/Zeniba</li>
+            <li>
+                <img src="img/haku.jpg" alt="Chihiro" class="casting_img">
+                <p>Miyu Irino<br>Haku</p>
+            </li>
+            <li>
+                <img src="img/yubaba.jpg" alt="Chihiro" class="casting_img">
+                <p>Mari Natsuki<br>Yubaba/Zeniba</p>
+            </li>
         </ul>
     </main>
 

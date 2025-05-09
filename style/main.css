@@ -32,6 +32,7 @@ li {
     justify-content: space-around;
     gap: 1.5rem;
     text-align: center;
+    color: black;
 }
 
 .casting_img {

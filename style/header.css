@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Quicksand, sans-serif;
+    background-color: #f4eee5;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.309), rgba(0, 0, 0, 0.94)), url('../img/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #f4eee5;
+                & .container_header {
+                    height: 100vh;
+                    width: 100vw;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    text-align: start;
+                    font-size: 2.5rem;
+                        & h1 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            padding: 1rem;
+                            text-align: start;
+                            font-size: 1.5rem;
+                                & span {
+                                    font-size: 3rem;
+                                    line-height: .7;
+                                }
+                        }
+                        & h2 {
+                            font-family: Merienda, cursive;
+                            font-size: 4.5rem;
+                            padding-top: 4rem;
+                        }
+                        & h3 {
+                            padding-top: 1rem;
+                            font-family: Merienda, cursive;
+                            font-size: 2.5rem;
+                        }
+                        & h4 {
+                            font-size: 1.5rem;
+                        }
+                        & p {
+                            width: 50%;
+                            font-size: 1rem;
+                            padding-bottom: 4rem;
+                        }
+                        & img {
+                            width:15%;
+                            height: auto;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.764);
+                            position: absolute;
+                            top: 25%;
+                            left: 75%;
+                        }
+                        & button {
+                            align-self: center;
+                        }
+        }
+}

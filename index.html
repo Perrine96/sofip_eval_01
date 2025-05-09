@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon film préféré</title>
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/button.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/denied.css">
+    <!-- Quicksand font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Quicksand font -->
+    <!-- Meriendra font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Meriendra font -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon-chihiro.jpg">
+    <!-- Favicon -->
+</head>
+
+<body>
+    <header>
+        <div class="container_header">
+            <h1>Mon film <br><span id="fave">préféré</span></h1>
+            <h2>Le Voyage de Chihiro</h2>
+            <h4>Réalisé par Hayao Miyazaki (2002)</h4>
+            <h3>Synopsis</h3>
+            <p>Le Voyage de Chihiro suit l’histoire de Chihiro, une fillette de dix ans qui, en route vers sa nouvelle maison avec ses parents, se retrouve plongée dans un monde mystérieux peuplé d’esprits. Lorsque ses parents sont transformés en cochons après avoir mangé une nourriture enchantée, Chihiro doit survivre dans cet univers étrange et trouver un moyen de les sauver. Aidée par l’énigmatique Haku, elle découvre un immense établissement de bains dirigé par la sorcière Yubaba, où elle devra travailler pour espérer retrouver sa liberté.</p>
+            <img src="img/chihiro-poster.jpg" alt="Poster du film 'Le Voyage de Chihiro'" class="film_poster">
+            
+            <button id="scrollToMain" type="button">En savoir plus</button>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="container_casting">
+            <h3 id="casting_title">Casting</h3>
+            <ul class="casting">
+                <li>
+                    <img src="img/chihiro.jpg" alt="Chihiro" class="casting_img">
+                    <p>Rumi Hiiragi<br>Chihiro</p>
+                </li>
+                <li>
+                    <img src="img/haku.jpg" alt="Chihiro" class="casting_img">
+                    <p>Miyu Irino<br>Haku</p>
+                </li>
+                <li>
+                    <img src="img/yubaba.jpg" alt="Chihiro" class="casting_img">
+                    <p>Mari Natsuki<br>Yubaba/Zeniba</p>
+            </li>
+        </ul>
+        </div>
+        
+        <div class="container_trailer">
+            <h3 id="trailer_title">Bande-annonce</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5-cro68n7CE?si=sGvWiIMi1Lvh2iV6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="container_review">
+            <div class="gradient">
+                <h3 id="review_title">Mon Avis</h3>
+                <p>Le Voyage de Chihiro est sans doute mon film préféré de Miyazaki, celui qui m'a le plus marqué dans mon enfance. À chaque visionnage, il me transporte dans un univers onirique où l'émerveillement côtoie la peur, la beauté se mêle à l'étrange. C'est un film qui ne se contente pas de raconter une histoire, mais qui invite à la réflexion, qui laisse une empreinte durable par sa poésie et son atmosphère. Chaque scène, chaque personnage semble chargé d’une émotion profonde, et c’est cette richesse qui fait de ce film une œuvre intemporelle.</p>
+            </div>  
+        </div>
+        
+    </main>
+    
+    <footer>
+        <button id="logout_btn" type="button" onClick="logout()">Déconnexion</button>
+    </footer>
+    <script src="script.js" defer></script>
+</body>

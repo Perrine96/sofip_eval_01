@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#casting_title, #trailer_title {
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 3rem;
+    font-family: Merienda, cursive;
+    color: #92272D;
+}
+
+.container_casting {
+    background-color: #f4eee5;
+}
+
+.casting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding : 0rem 10rem;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.casting_img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.casting_img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.container_trailer {
+    background-color: #f4eee5;
+    padding: 1.5rem 0rem 4rem 0rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container_review {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.208), rgb(0, 0, 0)), url(../img/flower.webp);
+    background-size: cover;
+    height: 80vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f4eee5;
+        & #review_title {
+            text-align: center;
+            padding: 0rem 2.5rem 2.5rem 2.5rem;
+            font-size: 3rem;
+            font-family: Merienda, cursive;
+            color: #f4eee5;
+        }
+        & p {
+            font-size: 1.2rem;
+            padding: 0rem 6rem;
+        }
+}

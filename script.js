@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `<div class="container">
         <h2>Bienvenue</h2>
         <p>Pour travailler aux bains et découvrir mon film préféré, tu dois traverser le pont et signer ton contrat avec Yubaba.</p>
-        <button id="enter_btn">Traverser</button>
+        <button id="enter_btn">Traverser le pont</button>
         </div>`;
 
         document.querySelector('#enter_btn').addEventListener('click', function() {
@@ -141,7 +141,7 @@ login_form.addEventListener('submit', function(event) {
             alert('Identité confirmée. Bienvenue dans la maison des bains !');
             window.location.href = 'index.html';
         } else {
-            alert('Le gardien des bains examine ton contrat… Hum, quelque chose ne colle. Vérifie ton identité et réessaie !');
+            alert('Le gardien des bains examine ton contrat… Hum, quelque chose ne colle pas. Vérifie ton identité et réessaie !');
         }
     } else {
         alert('Aucun esprit reconnu… Ton contrat n’apparaît pas dans les registres de Yubaba.');
@@ -206,6 +206,6 @@ function returnToLogin() {
 }
 
 function logout() {
-    alert('Déconnexion réussie !');
+    alert('Tu sors de la maison des bains !');
     window.location.href = 'login.html';
 }

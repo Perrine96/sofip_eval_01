@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <input type="password" id="password_confirm" name="password" required>
                     
                     <button type="submit" id="rgstr_btn">S'inscrire</button>
-                    <button id="goToLogin_btn" type="submit" onClick="returnToLogin()">Connexion</button>
                 </form>
                 </div>`;
         }
@@ -166,7 +165,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// SCROLL TO 
+//
+document.addEventListener('DOMContentLoaded', function() {
+    const main = document.querySelector('.main');
+    const scrollToMain = document.querySelector('#scrollToMain');
 
+    scrollToMain.addEventListener('click', function() {
+        main.scrollIntoView(
+            {
+                behavior: 'smooth',
+                block: 'start',
+            }
+        );
+
+    });
+});
 
 
 // FONCTIONS DE REDIRECTION

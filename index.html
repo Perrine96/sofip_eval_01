@@ -6,7 +6,8 @@
     <title>Mon film préféré</title>
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/main.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style/button.css">
+    <link rel="stylesheet" href="./style/footer.css">
     <!-- Quicksand font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,45 +25,53 @@
 
 <body>
     <header>
-        <div class="gradient">
-            <div class="container">
-                <h1>Mon film <br><span id="fave">préféré</span></h1>
-                <h2>Le Voyage de Chihiro</h2>
-                <h4>Réalisé par Hayao Miyazaki (2002)</h4>
-                <h3>Synopsis</h3>
-                <p>Chihiro, une petite fille de 10 ans, se retrouve dans un monde magique après que ses parents aient été transformés en cochons. Elle doit travailler dans un bain public pour les esprits afin de retrouver son nom et sauver ses parents.</p>
-                <img src="img/chihiro-poster.jpg" alt="Poster du film 'Le Voyage de Chihiro'" class="film_poster">
-                <button id="learn_more_btn" type="button" onClick="learnMore()">En savoir plus</button>
-            </div>
+        <div class="container">
+            <h1>Mon film <br><span id="fave">préféré</span></h1>
+            <h2>Le Voyage de Chihiro</h2>
+            <h4>Réalisé par Hayao Miyazaki (2002)</h4>
+            <h3>Synopsis</h3>
+            <p>Chihiro, une petite fille de 10 ans, se retrouve dans un monde magique après que ses parents aient été transformés en cochons. Elle doit travailler dans un bain public pour les esprits afin de retrouver son nom et sauver ses parents.</p>
+            <!-- <img src="img/chihiro-poster.jpg" alt="Poster du film 'Le Voyage de Chihiro'" class="film_poster"> -->
+            
+            <button id="scrollToMain" type="button">En savoir plus</button>
         </div>
     </header>
-
-    <main>
+    
+    <main class="main">
         <div class="container_casting">
-        <h3 id="casting_title">CASTING</h3>
-        <ul class="casting">
-            <li>
-                <img src="img/chihiro.jpg" alt="Chihiro" class="casting_img">
-                <p>Rumi Hiiragi<br>Chihiro</p>
-            </li>
-            <li>
-                <img src="img/haku.jpg" alt="Chihiro" class="casting_img">
-                <p>Miyu Irino<br>Haku</p>
-            </li>
-            <li>
-                <img src="img/yubaba.jpg" alt="Chihiro" class="casting_img">
-                <p>Mari Natsuki<br>Yubaba/Zeniba</p>
+            <h3 id="casting_title">CASTING</h3>
+            <ul class="casting">
+                <li>
+                    <img src="img/chihiro.jpg" alt="Chihiro" class="casting_img">
+                    <p>Rumi Hiiragi<br>Chihiro</p>
+                </li>
+                <li>
+                    <img src="img/haku.jpg" alt="Chihiro" class="casting_img">
+                    <p>Miyu Irino<br>Haku</p>
+                </li>
+                <li>
+                    <img src="img/yubaba.jpg" alt="Chihiro" class="casting_img">
+                    <p>Mari Natsuki<br>Yubaba/Zeniba</p>
             </li>
         </ul>
         </div>
-
-        <div class="container_review">
-            <h3 id="review_title">Mon Avis</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem et quasi exercitationem praesentium. Illum culpa, minima numquam vel ipsam magnam? Nam ipsam praesentium fugit natus et commodi officiis facilis aspernatur?</p>
+        
+        <div class="container_trailer">
+            <h3 id="trailer_title">BANDE ANNONCE</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5-cro68n7CE?si=sGvWiIMi1Lvh2iV6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        
+        <div class="container_review">
+            <div class="gradient">
+                <h3 id="review_title">Mon Avis</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem et quasi exercitationem praesentium. Illum culpa, minima numquam vel ipsam magnam? Nam ipsam praesentium fugit natus et commodi officiis facilis aspernatur?</p>
+            </div>  
+        </div>
+        
     </main>
-
+    
     <footer>
         <button id="logout_btn" type="button" onClick="logout()">Déconnexion</button>
     </footer>
+    <script src="script.js" defer></script>
 </body>

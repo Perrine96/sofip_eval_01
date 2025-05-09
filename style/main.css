@@ -1,4 +1,10 @@
-#casting_title {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#casting_title, #trailer_title {
     text-align: center;
     padding: 2.5rem;
     font-size: 3rem;
@@ -34,4 +40,34 @@ li {
 .casting_img:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease;
+}
+
+.container_trailer {
+    /* background-color: black; */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container_review {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.208), rgb(0, 0, 0)), url(../img/flower.webp);
+    background-size: cover;
+    height: 80vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f4eee5;
+        & #review_title {
+            text-align: center;
+            padding: 2.5rem;
+            font-size: 3rem;
+            font-family: Merienda, cursive;
+            color: #f4eee5;
+        }
 }

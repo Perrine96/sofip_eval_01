@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon film préféré</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./style/register_login.css">
+    <link rel="stylesheet" href="./style/button.css">
+    <!-- Quicksand font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Quicksand font -->
+    <!-- Meriendra font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Meriendra font -->
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon-chihiro.jpg">
     <!-- Favicon -->
 </head>
 
 <body>
+    <div class="container">
     <h1>Connexion</h1>
     <form id="login_form">
         <label for="username">Pseudo:</label>
@@ -19,7 +31,8 @@
         <input type="password" id="login_password" name="login_password" required>
         
         <button type="submit" id="login_btn">Connexion</button>
+        <!-- <button id="return_btn" type="button" onClick="returnToRegister()">Retour</button> -->
     </form>
-    <button id="return_btn" type="button" onClick="returnToRegister()">Retour</button>
+    </div>
     <script src="script.js"></script>
 </body>

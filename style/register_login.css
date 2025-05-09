@@ -19,7 +19,7 @@ body {
     align-items: center;
     text-align: center;
     font-size: 2rem;
-    gap: 1rem;
+    gap: 2rem;
         & h1 {
             font-size: 3rem;
             font-family: Merienda, cursive;
@@ -29,6 +29,14 @@ body {
             font-size: 3rem;
             font-family: Merienda, cursive;
             margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.5rem;
+            padding: 0rem 8rem;
+        }
+        & #message {
+            font-size: 1.5rem;
+            color: #bb3037;
         }
         & form {
             background-color: #1111109f;

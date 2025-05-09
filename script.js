@@ -9,18 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem('gameCompleted') === 'true') {
             document.body.innerHTML =
                 `<div class="container">
-                <h1>Inscription</h1>
+                <h1>Signature</h1>
                 <form id="rgstr_form" action="register" method="POST">
-                    <label for="username">Pseudo:</label>
+                    <label for="username">Nom d'esprit:</label>
                     <input type="text" id="username" name="username" required>
                     
-                    <label for="password">Mot de passe:</label>
+                    <label for="password">Signature:</label>
                     <input type="password" id="password" name="password" required>
                     
-                    <label for="password">Confirmez le mot de passe:</label>
+                    <label for="password">Yubaba déteste les tricheurs...<br>
+                     Signe à nouveau:</label>
                     <input type="password" id="password_confirm" name="password" required>
                     
-                    <button type="submit" id="rgstr_btn">S'inscrire</button>
+                    <button type="submit" id="rgstr_btn">Entrer dans les bains</button>
                 </form>
                 </div>`;
         }
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.innerHTML =
         `<div class="container">
         <h2>Bienvenue</h2>
-        <p>Traverse le pont pour découvrir mon film préféré.</p>
+        <p>Pour travailler aux bains et découvrir mon film préféré, tu dois traverser le pont et signer ton contrat avec Yubaba.</p>
         <button id="enter_btn">Traverser</button>
         </div>`;
 
@@ -37,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.innerHTML =
             `<div class="container">
             <p>Mais attends... Tu es humain ! <br> 
-            Les humains ne sont pas autorisés au Royaume des Esprits <br>
-            Vite, retiens ta respiration pour passer inaperçu !!!</p>
+            Seuls les esprits sont autorisés à travailler dans la maison des bains. <br>
+            Vite, retiens ta respiration pour passer inaperçu !</p>
             <button id="hold_btn">Retenir sa respiration</button>
             <p id="message"></p>
             </div>`; 
@@ -66,13 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (clickCount === 7) { 
                     document.body.innerHTML = 
                     `<div class="container">
-                    <p>Pfiou ! Ça y est, tu as traversé. Respire !</p>
+                    <p>Pfiou ! Tu as réussi à traverser sans te faire repérer… Respire doucement, mais ne relâche pas totalement ta vigilance. Yubaba t’attend pour signer ton contrat.</p>
                     </div>`; 
 
                     localStorage.setItem('gameCompleted', 'true'); 
 
                     const register_btn = document.createElement("button");
-                    register_btn.textContent = "Accéder à l'inscription";
+                    register_btn.textContent = "Signer le contrat de Yubaba";
                     register_btn.id = "register_btn"; 
 
                     const container = document.querySelector('.container');
@@ -160,12 +161,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!username || !password) {
         document.body.innerHTML = 
-        `<h2>Accès restreint</h2>
-        <p>Vous devez être inscrit pour accéder à cette page.</p>
-        <button id="redirect_rgstr_btn">S'inscrire</button>`;
+        `<div class="container">
+        <h1>Accès restreint</h1>
+        <p>Tu n’es pas inscrit sur la liste des travailleurs des bains. Yubaba ne tolère pas les intrus… <br>
+        Si tu veux éviter de finir en cochon, tu ferais mieux de signer un contrat immédiatement.</p>
+        <button id="redirect_rgstr_btn">Signer le contrat</button>
+        </div>`;
     }
 
-    // boutons de redirection
+    // bouton de redirection
     document.querySelector('#redirect_rgstr_btn').addEventListener('click', function() {
         window.location.href = 'register.html';
     });

@@ -15,7 +15,7 @@ header {
     background-position: center;
     height: 100vh;
     color: #f4eee5;
-                & .container {
+                & .container_header {
                     height: 100vh;
                     width: 100vw;
                     padding: 1rem;
@@ -40,10 +40,10 @@ header {
                         & h2 {
                             font-family: Merienda, cursive;
                             font-size: 4.5rem;
-                            padding-top: 3rem;
+                            padding-top: 4rem;
                         }
                         & h3 {
-                            padding-top: 3rem;
+                            padding-top: 1rem;
                             font-family: Merienda, cursive;
                             font-size: 2.5rem;
                         }

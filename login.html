@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon film préféré</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon-chihiro.jpg">
+    <!-- Favicon -->
 </head>
 
 <body>
     <h1>Connexion</h1>
     <form id="login_form">
         <label for="username">Pseudo:</label>
-        <input type="text" id="username" name="username" required>
-        
+        <input type="text" id="login_username" name="login_username" required>
         <label for="password">Mot de passe:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="login_password" name="login_password" required>
         
-        <input id="login_btn" type="submit" value="Connexion"/> 
+        <button type="submit" id="login_btn">Connexion</button>
     </form>
     <button id="return_btn" type="button" onClick="returnToRegister()">Retour</button>
     <script src="script.js"></script>

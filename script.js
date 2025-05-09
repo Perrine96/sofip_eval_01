@@ -1,3 +1,19 @@
+// EXIT
+//
+document.addEventListener('DOMContentLoaded', function() {
+
+    const exit_btn = document.querySelector('#exit_btn');
+
+    exit_btn.addEventListener('click', function() {
+        localStorage.clear();
+
+        console.log("Données localStorage après suppression :", localStorage);
+
+        window.location.href = 'register.html';
+    });
+});
+
+
 // HOLD YOUR BREATH
 //
 let clickCount = 0; 
@@ -195,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 // FONCTIONS DE REDIRECTION
 // 
 function returnToRegister() {
@@ -206,6 +223,9 @@ function returnToLogin() {
 }
 
 function logout() {
-    alert('Tu sors de la maison des bains !');
-    window.location.href = 'login.html';
+    let confirmation = confirm('Tu vas quitter la maison des bains.');
+
+    if (confirmation) {
+        window.location.href = 'exit.html';
+    } 
 }

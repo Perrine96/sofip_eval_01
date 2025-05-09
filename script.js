@@ -104,7 +104,7 @@ rgstr_form.addEventListener('submit', function(event) {
     let password_confirm = document.querySelector('#password_confirm').value;
 
     if (password !== password_confirm) {
-        alert('Les mots de passe doivent correspondre.');
+        alert("Yubaba n'accepte que les contrats signés correctement. Assure-toi que ta signature correspond !");
         return;
     }
 
@@ -112,9 +112,9 @@ rgstr_form.addEventListener('submit', function(event) {
     localStorage.setItem('password', JSON.stringify(password));
 
     if (username.value == '' || password.value == '' || password_confirm.value == '') {
-        alert('Veuillez remplir tous les champs.');
+        alert('Remplis bien tous les champs.');
     } else {
-        alert('Inscription réussie !');
+        alert('Contrat signé !');
         window.location.href = 'login.html';
     }
 });
@@ -138,13 +138,13 @@ login_form.addEventListener('submit', function(event) {
     
     if (storedUsername && storedPassword) {
         if (username === JSON.parse(storedUsername) && password === JSON.parse(storedPassword)) {
-            alert('Connexion réussie !');
+            alert('Identité confirmée. Bienvenue dans la maison des bains !');
             window.location.href = 'index.html';
         } else {
-            alert('Pseudo ou mot de passe invalide, veuillez réessayer.');
+            alert('Le gardien des bains examine ton contrat… Hum, quelque chose ne colle. Vérifie ton identité et réessaie !');
         }
     } else {
-        alert('Aucun utilisateur enregistré. Veuillez vous inscrire.');
+        alert('Aucun esprit reconnu… Ton contrat n’apparaît pas dans les registres de Yubaba.');
     }
 });
 });

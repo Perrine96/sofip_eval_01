@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (localStorage.getItem('gameCompleted') === 'true') {
             document.body.innerHTML =
-                `<h1>Inscription</h1>
+                `<div class="container">
+                <h1>Inscription</h1>
                 <form id="rgstr_form" action="register" method="POST">
                     <label for="username">Pseudo:</label>
                     <input type="text" id="username" name="username" required>
@@ -20,21 +21,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     <input type="password" id="password_confirm" name="password" required>
                     
                     <button type="submit" id="rgstr_btn">S'inscrire</button>
+                    <button id="goToLogin_btn" type="submit" onClick="returnToLogin()">Connexion</button>
                 </form>
-                <button id="goToLogin_btn" type="submit" onClick="returnToLogin()">Connexion</button>`
+                </div>`;
         }
 
         else {
         document.body.innerHTML =
-        `<h2>Inscription</h2>
+        `<div class="container">
+        <h2>Inscription</h2>
         <p>Tu vas maintenant entrer dans le royaume des esprits.</p>
-        <button id="enter_btn">Entrer</button>`;
+        <button id="enter_btn">Entrer</button>
+        </div>`;
 
         document.querySelector('#enter_btn').addEventListener('click', function() {
             document.body.innerHTML =
-            `<p>Mais attends ! Tu es humain ! Vite, retiens ta respiration pour passer inaperçu !!!</p>
+            `<div class="container">
+            <p>Mais attends ! Tu es humain ! Vite, retiens ta respiration pour passer inaperçu !!!</p>
             <button id="hold_btn">Retenir sa respiration</button>
-            <p id="message"></p>`; 
+            <p id="message"></p>
+            </div>`; 
 
             const hold_btn = document.querySelector('#hold_btn');
 
@@ -48,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     message.textContent = "Continue ! Les esprits te surveillent...";
                 } else if (clickCount < 10) {
                     message.textContent = "Presque invisible, encore un petit effort...";
-                } else {
+                } else if (clickCount === 10) {   
                     message.textContent = "Bravo ! Tu es passé inaperçu. Inscris-toi.";
 
                     localStorage.setItem('gameCompleted', 'true'); 
@@ -57,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     register_btn.textContent = "Accéder à l'inscription";
                     register_btn.id = "register_btn"; 
 
-                    document.body.appendChild(register_btn);
+                    const container = document.querySelector('.container');
+                    container.appendChild(register_btn);
 
                     register_btn.addEventListener("click", function() {
                         window.location.href = "register.html";

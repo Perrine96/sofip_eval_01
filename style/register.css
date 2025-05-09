@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/bridge.jpg);
+    background-size: cover;
+    color: #f4eee5;
+    font-family: Quicksand, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+        & h1 {
+            font-size: 3rem;
+            font-family: Merienda, cursive;
+            margin-bottom: 1rem;
+        }
+        & form {
+            background-color: #1111109f;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.764);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+                & label {
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;
+                }
+                & input {
+                    background-color: rgba(0, 0, 0, 0.897);
+                    color: #f4eee5;
+                    font-size: 1.3rem;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    border: none;
+                    margin-bottom: 1rem;
+                }
+        }
+}

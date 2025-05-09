@@ -19,7 +19,13 @@ body {
     align-items: center;
     text-align: center;
     font-size: 2rem;
+    gap: 1rem;
         & h1 {
+            font-size: 3rem;
+            font-family: Merienda, cursive;
+            margin-bottom: 1rem;
+        }
+        & h2 {
             font-size: 3rem;
             font-family: Merienda, cursive;
             margin-bottom: 1rem;

@@ -59,6 +59,9 @@ header {
                             width:15%;
                             height: auto;
                             box-shadow: 0 0 10px rgba(0, 0, 0, 0.764);
+                            position: absolute;
+                            top: 25%;
+                            left: 75%;
                         }
                         & button {
                             align-self: center;

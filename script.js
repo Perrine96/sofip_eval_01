@@ -28,15 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
         else {
         document.body.innerHTML =
         `<div class="container">
-        <h2>Inscription</h2>
-        <p>Tu vas maintenant entrer dans le royaume des esprits.</p>
-        <button id="enter_btn">Entrer</button>
+        <h2>Bienvenue</h2>
+        <p>Traverse le pont pour découvrir mon film préféré.</p>
+        <button id="enter_btn">Traverser</button>
         </div>`;
 
         document.querySelector('#enter_btn').addEventListener('click', function() {
             document.body.innerHTML =
             `<div class="container">
-            <p>Mais attends ! Tu es humain ! Vite, retiens ta respiration pour passer inaperçu !!!</p>
+            <p>Mais attends... Tu es humain ! <br> 
+            Les humains ne sont pas autorisés au Royaume des Esprits <br>
+            Vite, retiens ta respiration pour passer inaperçu !!!</p>
             <button id="hold_btn">Retenir sa respiration</button>
             <p id="message"></p>
             </div>`; 
@@ -49,12 +51,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const message = document.querySelector('#message');
 
-                if (clickCount < 5) {
-                    message.textContent = "Continue ! Les esprits te surveillent...";
-                } else if (clickCount < 10) {
-                    message.textContent = "Presque invisible, encore un petit effort...";
-                } else if (clickCount === 10) {   
-                    message.textContent = "Bravo ! Tu es passé inaperçu. Inscris-toi.";
+                if (clickCount === 1) {
+                    message.textContent = "C'est ça, continue !";
+                } else if (clickCount === 2) {
+                    message.textContent = "Fais attention, les esprits t'observent...";
+                } else if (clickCount === 3) {
+                    message.textContent = "Aller, encore un petit effort...";
+                } else if (clickCount === 4) {
+                    message.textContent = "Tiens bon !";
+                } else if (clickCount === 5) {
+                    message.textContent = "Presque invisible, continue comme ça...";
+                } else if (clickCount === 6) {
+                    message.textContent = "T'y es presque...";
+                } else if (clickCount === 7) { 
+                    document.body.innerHTML = 
+                    `<div class="container">
+                    <p>Pfiou ! Ça y est, tu as traversé. Respire !</p>
+                    </div>`; 
 
                     localStorage.setItem('gameCompleted', 'true'); 
 
@@ -149,17 +162,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.innerHTML = 
         `<h2>Accès restreint</h2>
         <p>Vous devez être inscrit pour accéder à cette page.</p>
-        <button id="redirect_rgstr_btn">S'inscrire</button>
-        <button id="redirect_login_btn">Se connecter</button>`;
+        <button id="redirect_rgstr_btn">S'inscrire</button>`;
     }
 
     // boutons de redirection
     document.querySelector('#redirect_rgstr_btn').addEventListener('click', function() {
         window.location.href = 'register.html';
-    });
-
-    document.querySelector('#redirect_login_btn').addEventListener('click', function() {
-        window.location.href = 'login.html';
     });
     }
 });

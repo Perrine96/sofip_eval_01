@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>Mais attends... Tu es humain ! <br> 
             Seuls les esprits sont autorisés à travailler dans la maison des bains. <br>
             Vite, retiens ta respiration pour passer inaperçu !</p>
-            <button id="hold_btn">Retenir sa respiration</button>
+            <button id="hold_btn">Retenir ta respiration</button>
             <p id="message"></p>
             </div>`; 
 

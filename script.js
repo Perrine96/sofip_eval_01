@@ -1,3 +1,75 @@
+// HOLD YOUR BREATH
+//
+let clickCount = 0; 
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    if (window.location.pathname === '/register.html') {
+
+        if (localStorage.getItem('gameCompleted') === 'true') {
+            document.body.innerHTML =
+                `<h1>Inscription</h1>
+                <form id="rgstr_form" action="register" method="POST">
+                    <label for="username">Pseudo:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <label for="password">Confirmez le mot de passe:</label>
+                    <input type="password" id="password_confirm" name="password" required>
+                    
+                    <button type="submit" id="rgstr_btn">S'inscrire</button>
+                </form>
+                <button id="goToLogin_btn" type="submit" onClick="returnToLogin()">Connexion</button>`
+        }
+
+        else {
+        document.body.innerHTML =
+        `<h2>Inscription</h2>
+        <p>Tu vas maintenant entrer dans le royaume des esprits.</p>
+        <button id="enter_btn">Entrer</button>`;
+
+        document.querySelector('#enter_btn').addEventListener('click', function() {
+            document.body.innerHTML =
+            `<p>Mais attends ! Tu es humain ! Vite, retiens ta respiration pour passer inaperçu !!!</p>
+            <button id="hold_btn">Retenir sa respiration</button>
+            <p id="message"></p>`; 
+
+            const hold_btn = document.querySelector('#hold_btn');
+
+            hold_btn.addEventListener('click', function() {
+                clickCount++; 
+                console.log(clickCount); 
+
+                const message = document.querySelector('#message');
+
+                if (clickCount < 5) {
+                    message.textContent = "Continue ! Les esprits te surveillent...";
+                } else if (clickCount < 10) {
+                    message.textContent = "Presque invisible, encore un petit effort...";
+                } else {
+                    message.textContent = "Bravo ! Tu es passé inaperçu. Inscris-toi.";
+
+                    localStorage.setItem('gameCompleted', 'true'); 
+
+                    const register_btn = document.createElement("button");
+                    register_btn.textContent = "Accéder à l'inscription";
+                    register_btn.id = "register_btn"; 
+
+                    document.body.appendChild(register_btn);
+
+                    register_btn.addEventListener("click", function() {
+                        window.location.href = "register.html";
+                    });
+                }
+            });
+        });
+    }
+    }
+});
+
+
 // INSCRIPTION
 // 
 document.addEventListener('DOMContentLoaded', function() {
@@ -87,32 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// HOLD YOUR BREATH
-//
-document.addEventListener('DOMContentLoaded', function() {
 
-    if (window.location.pathname === '/register.html') {
-
-    document.body.innerHTML =
-    `<h2>Inscription</h2>
-    <p>Tu vas maintenant entrer le royaume des esprits.</p>
-    <button id="enter_btn">Entrer</button>`;
-
-    const enter_btn = document.querySelector('#enter_btn');
-
-    document.querySelector('#enter_btn').addEventListener('click', function() {
-        document.body.innerHTML =
-        `<p>Mais attend ! Tu es humain ! Les esprits vont te démasquer, vite retiens ta respiration !!!</p>
-        <button id="hold_btn">Retenir sa respiration</button>`;
-    });
-
-    const hold_btn = document.querySelector('#hold_btn');
-
-    hold_btn.addEventListener('click', function() {
-        
-    });
-    }
-});
 
 
 // FONCTIONS DE REDIRECTION
